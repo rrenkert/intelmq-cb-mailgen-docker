@@ -8,7 +8,9 @@ COPY fody/startup-spa.sh /opt/startup-spa.sh
 
 WORKDIR /opt/src/
 
-RUN git clone https://github.com/Intevation/intelmq-fody.git
+RUN git clone https://github.com/rrenkert/intelmq-fody.git
+
+RUN cd intelmq-fody && git switch session-auth
 
 WORKDIR /opt/src/intelmq-fody
 
